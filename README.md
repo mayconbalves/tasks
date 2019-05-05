@@ -1,24 +1,13 @@
-# README
+# TODO APP WITH RUBY ON RAILS AND REACT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Clone project
 
-Things you may want to cover:
+* https://github.com/mayconbalves/tasks
 
-* Ruby version
+## Running backend
 
-* System dependencies
+cd tasks `rails s -p + port`
 
-* Configuration
+## Running frontend
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+cd tasks_client `yarn install` and after `yarn start`
