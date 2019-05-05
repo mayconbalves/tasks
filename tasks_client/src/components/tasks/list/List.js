@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card'
 import Table from 'react-bootstrap/Table'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,7 +12,6 @@ class List extends Component {
   }
 
   async checkTask(task) {
-    let form = {'task': {'done': 'true'}}
     await fetch(`http://localhost:3001/tasks/${task.id}`,
       {
         method: 'PUT',
