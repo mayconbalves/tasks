@@ -6,7 +6,7 @@
 
 ## Running backend
 
-cd tasks `rails s -p + port`
+cd tasks `rails server -p 4000`
 
 ## Running frontend
 
