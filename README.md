@@ -6,7 +6,17 @@
 
 ## Running backend
 
-cd tasks `rails server -p 4000`
+cd tasks
+
+`$ bundle install`
+
+after installed dependencies generate migrations
+
+`$ rails db:create db:migrate`
+
+insert values inside seeds db
+
+`$ rails db:seed`
 
 ## Running frontend
 
