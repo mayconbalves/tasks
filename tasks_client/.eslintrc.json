@@ -11,7 +11,8 @@
   },
   "plugins": ["react"],
   "rules": {
-    "semi": ["error", "always"],
+    "indent": ["error", 4],
+    "semi": ["error", "double"],
     "quotes": ["error", "double"]
   }
 }
