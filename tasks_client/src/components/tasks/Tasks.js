@@ -15,8 +15,6 @@ class Tasks extends Component {
     this.loadTasks = this.loadTasks.bind(this)
   }
 
-
-
   componentDidMount() {
     this.loadTasks()
   }
