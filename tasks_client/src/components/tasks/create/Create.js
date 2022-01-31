@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-function CreateTask(props) {
+function CreateTask({ loadTasks }) {
   const [title, setTitle] = useState('')
   const [show, setShow] = useState('')
 
@@ -20,7 +20,7 @@ function CreateTask(props) {
     })
     setShow(false)
     setTitle('')
-    props.loadTasks()
+    loadTasks()
   }
 
   return (
