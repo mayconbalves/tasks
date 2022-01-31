@@ -18,6 +18,10 @@ insert values inside seeds db
 
 `$ rails db:seed`
 
+start project
+
+`$ rails server -p 3001`
+
 ## Running frontend
 
 cd tasks_client `yarn install` and after `yarn start`
