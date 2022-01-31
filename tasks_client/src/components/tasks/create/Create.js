@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+import Button from '../../button/Button'
 import Form from 'react-bootstrap/Form'
 
-function CreateTask({ loadTasks }) {
+const CreateTask = ({ loadTasks }) => {
   const [title, setTitle] = useState('')
   const [show, setShow] = useState('')
 
@@ -24,14 +24,13 @@ function CreateTask({ loadTasks }) {
   }
 
   return (
-    <div>
+    <>
       <Button
         onClick={() => setShow(true)}
         variant="dark"
         className="float-right create_task_btn"
-      >
-        + Tasks
-      </Button>
+        title="+ Tasks"
+      />
 
       <Modal show={show || false} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
@@ -46,17 +45,21 @@ function CreateTask({ loadTasks }) {
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShow(false)}>
-            Close
-          </Button>
-          <form onSubmit={handleSubmit}>
-            <Button variant="dark" type="submit">
-              Create
-            </Button>
-          </form>
+          <Button
+            variant="secondary"
+            onClick={() => setShow(false)}
+            title="Close"
+          />
+
+          <Button
+            variant="dark"
+            type="button"
+            onClick={handleSubmit}
+            title="Create"
+          />
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   )
 }
 
