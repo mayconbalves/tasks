@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from '../../button/Button'
 import Form from 'react-bootstrap/Form'
+import { CREATE_TASK } from '../../../api'
 
 const CreateTask = ({ loadTasks }) => {
   const [title, setTitle] = useState('')
   const [show, setShow] = useState('')
 
   const handleSubmit = async () => {
-    await fetch('http://localhost:3001/tasks', {
+    await fetch(`${CREATE_TASK}`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
